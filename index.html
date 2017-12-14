@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Indiabiz</title>
+
+    <!-- Bootstrap -->
+
+    <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  <div class="page">
+        <div class="header-logo">
+            <p class="header-title">INDIABIZ</p>
+        </div>
+        <div class="dashboard">
+            <div class="col-md-offset-4 col-md-4 dashboard-container">
+                <p class="dashboard-context align">You are with the most preferred business network to buy,sell,fund,grow</p>
+                <div id="index">
+                <form>
+                <div class="control align">
+                  <div class=" radio radio-info  ">
+                   
+                      <input type="radio" id="preferred1" v-validate="'required|in:1,2'" value="1" name="preferred" >
+                       <label for="preferred1">I am an Individual
+                    </label>
+                    </div>
+                  <div class="  radio radio-info ">
+                   
+                      <input type="radio" id= "preferred2"value="2" name="preferred">
+                       <label for="preferred2">I own or represent a business
+                    </label>
+                  </div>
+                  </div>
+            <span class="alert-errors align is-danger" v-show="errors.has('preferred')">{{ errors.first('preferred') }}</span>
+                  <div class="form-group align">
+                    <button type="button" class="btn primary-button" v-on:click="validateForm">Continue</button>
+                  </div>
+                </form>
+                </div>
+            </div>
+            <div class="col-md-4">
+            </div>
+        </div>
+          <div class="footer">
+            <ul class="footer-container">
+              <li><span class="glyphicon glyphicon-copyright-mark">2018 Indiabizforsale</span></li>
+              <li><a href="#">Terms</a> </li> 
+              <li><a href="#">Privacy</a> </li> 
+              <li><a href="#">Contact Us</a> </li> 
+            </ul>
+          </div>
+          </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.10/vue.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.17.1/axios.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/vee-validate/2.0.0-beta.25/vee-validate.min.js"></script>
+    <script src="script/script.js"></script>
+   
+  </body>
+</html>

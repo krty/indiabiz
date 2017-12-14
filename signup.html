@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Indiabiz</title>
+
+    <!-- Bootstrap -->
+
+    <link href="bootstrap-3.3.7-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  <div class="page">
+        <div class="header-logo">
+            <p class="header-title">INDIABIZ</p>
+        </div>
+        <div class="dashboard">
+            <div class="col-md-offset-3 col-md-6 dashboard-container">
+                <p class="dashboard-context align"> Sign Up</p>
+               <div id="app">
+    <form >
+            <div class="form-group has-feedback align" v-bind:class="{'has-error': errors.has('firstName')}">
+             <label class="control-label" for="firstName">Name</label>
+                <input id="firstName" name="firstName" type="text" class="form-control" placeholder="First Name" v-model="foms.firstName" v-validate="'required|min:2|alpha'">
+           <i class="form-control-feedback glyphicon glyphicon-user icon-edit"></i>
+
+                <span class="alert-errors is-invalid" v-if="errors.has('firstName')">{{errors.first('firstName')}}</span>
+            </div>
+        <div class="form-group has-feedback align" v-bind:class="{'has-error': errors.has('email')}">
+             <p class="control  has-icon has-icon-right">
+              <label class="control-label" for="email">Email</label>
+           <input id="email" name="email" type="email" class="form-control is-invalid" placeholder="Your email address" v-model="foms.email" v-validate="'required|email'">
+           <i class="form-control-feedback glyphicon glyphicon-user icon-edit"></i>
+
+            <span class="is-danger alert-errors" v-if="errors.has('email')">{{errors.first('email')}}</span>
+    </p>
+        </div>
+        <div class="form-group has-feedback align" v-bind:class="{'has-error': errors.has('password')}">
+             <label class="control-label" for="firstName">Create a Password</label>
+            <input id="password" name="password" type="password" class="form-control" placeholder="Choose a password" v-model="foms.password" v-validate="'required|min:8|max:32'">
+           <i class="form-control-feedback glyphicon glyphicon-eye-open icon-edit"></i>
+            <span class="alert-errors" v-if="errors.has('password')">{{errors.first('password')}}</span>
+        </div>
+        <div class="form-group align">
+        <p class="terms">By clicking the button,you agreeing to our <a>terms & conditions</a>
+        </div>
+        <div class="form-group align">
+            <button class="btn primary-button" type="button" v-on:click="signUp">Sign Up</button>
+        </div>
+    </form>
+</div>
+            </div>
+            <div class="col-md-3">
+            </div>
+        </div>
+         <div class="footer">
+            <ul class="footer-container">
+              <li><span class="glyphicon glyphicon-copyright-mark">2018 Indiabizforsale</span></li>
+              <li><a href="#">Terms</a> </li> 
+              <li><a href="#">Privacy</a> </li> 
+              <li><a href="#">Contact Us</a> </li> 
+            </ul>
+          </div>
+          </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+   <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.18/vue.min.js"></script> -->
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.10/vue.min.js"></script>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.17.1/axios.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/vee-validate/2.0.0-beta.25/vee-validate.min.js"></script>
+    <script src="script/script.js"></script>
+    <script>
+
+   
+    </script>
+  </body>
+</html>
