@@ -24,6 +24,7 @@
             <p class="header-title">INDIABIZ</p>
         </div>
         <div class="dashboard">
+        <div class="container">
             <div class="col-md-offset-3 col-md-6 dashboard-container">
                 <p class="dashboard-context align"> Sign Up</p>
                <div id="app">
@@ -51,7 +52,7 @@
             <span class="alert-errors" v-if="errors.has('password')">{{errors.first('password')}}</span>
         </div>
         <div class="form-group align">
-        <p class="terms">By clicking the button,you agreeing to our <a>terms & conditions</a>
+        <p class="terms">By clicking the button,you agreeing to our <a>terms & conditions</a></p>
         </div>
         <div class="form-group align">
             <button class="btn primary-button" type="button" v-on:click="signUp">Sign Up</button>
@@ -62,7 +63,7 @@
             <div class="col-md-3">
             </div>
         </div>
-         <div class="footer">
+        <div class="footer">
             <ul class="footer-container">
               <li><span class="glyphicon glyphicon-copyright-mark">2018 Indiabizforsale</span></li>
               <li><a href="#">Terms</a> </li> 
@@ -70,6 +71,8 @@
               <li><a href="#">Contact Us</a> </li> 
             </ul>
           </div>
+        </div>
+         
           </div>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
